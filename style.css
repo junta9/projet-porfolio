@@ -84,7 +84,14 @@ main {
 }
 /* *********************************************** */
 header {
+  display: none;
   height: 100px;
+  animation: header 4s ease-in forwards;
+}
+@keyframes header {
+  100% {
+    display: block;
+  }
 }
 header nav {
   display: flex;
