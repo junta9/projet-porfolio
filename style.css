@@ -14,7 +14,7 @@ body {
   font-family: SF mono;
   height: 100%;
   width: 100vw;
-  overflow-Y: hidden;
+  /* overflow-Y: hidden; */
 }
 main {
   padding: 0 150px;
@@ -22,10 +22,9 @@ main {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
+  display: none;
 }
-/* .start {
-  overflow-x: hidden;
-} */
+
 
 .presentation {
   height: 100vh;
@@ -82,16 +81,10 @@ main {
   stroke-dashoffset: 600px;
   animation: anim 2s ease-in-out forwards;
 }
-/* *********************************************** */
+/* ********************Fin du dasharray**************** */
 header {
-  display: none;
+  /* visibility: hidden; */
   height: 100px;
-  animation: header 4s ease-in forwards;
-}
-@keyframes header {
-  100% {
-    display: block;
-  }
 }
 header nav {
   display: flex;
@@ -103,14 +96,22 @@ header nav {
 .logo {
   width: 100px;
 }
+/* ***************************Menu animation******************** */
 .logo a svg {
   width: 50%;
   margin-left: 40px;
   position: relative;
   top: 0px;
   left: -100px;
-  transform: translateX(100px);
-  transition: transform 0.5s 4s ease-in;
+  animation: translateX 1s 4s ease-in forwards;
+}
+@keyframes translateX {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
 }
 
 .logo a,
@@ -131,8 +132,8 @@ header nav {
   justify-content: center;
   position: relative;
   top: -100px;
-  transform: translateY(100px);
-  transition: transform 0.5s 4.4s ease-in;
+  animation: translateY 1s 4.4s ease-in forwards;
+
 }
 .menu {
   color: #64ffda;
@@ -160,27 +161,44 @@ header nav {
 .menu li:nth-child(1) {
   position: relative;
   top: -100px;
-  transform: translateY(100px);
-  transition: transform 0.5s 4s ease;
+  /* transform: translateY(100px);
+  transition: transform 0.5s 4s ease; */
+  animation: translateY 1s 4s ease-in forwards;
 }
 .menu li:nth-child(2) {
   position: relative;
   top: -100px;
-  transform: translateY(100px);
-  transition: transform 0.5s 4.1s ease-in;
+  /* transform: translateY(100px);
+  transition: transform 0.5s 4.1s ease-in; */
+  animation: translateY 1s 4.1s ease-in forwards;
+
 }
 .menu li:nth-child(3) {
   position: relative;
   top: -100px;
-  transform: translateY(100px);
-  transition: transform 0.5s 4.2s ease-in;
+  /* transform: translateY(100px);
+  transition: transform 0.5s 4.2s ease-in; */
+  animation: translateY 1s 4.2s ease-in forwards;
+
 }
 .menu li:nth-child(4) {
   position: relative;
   top: -100px;
-  transform: translateY(100px);
-  transition: transform 0.5s 4.3s ease-in;
+  /* transform: translateY(100px);
+  transition: transform 0.5s 4.3s ease-in; */
+  animation: translateY 1s 4.3s ease-in forwards;
+
 }
+@keyframes translateY {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+/* ****************Fin du menu animation************* */
+
 .left-social {
   width: 40px;
   position: fixed;
@@ -242,7 +260,8 @@ header nav {
 }
 
 .left-social, .right-mail, .presentation, main  {
-  animation: fixed-opa 1s ease-in 4.3s forwards;
+  /* animation: fixed-opa 1s ease-in 4.3s forwards; */
+  animation: fixed-opa 1s ease-in forwards;
   opacity: 0;
 }
 @keyframes fixed-opa {
