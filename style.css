@@ -375,4 +375,16 @@ header nav {
     opacity: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  #portfolio {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .formation {
+    justify-content: center;
+  }
+}
+  
+
 
