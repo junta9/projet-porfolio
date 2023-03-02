@@ -281,12 +281,14 @@ header nav {
   height: 600px;
   width: 95%;
   perspective: 50rem;
+  /* display: flex;
+  flex-direction: column; */
 }
 #portfolio h2 {
+  text-align: center;
+  margin-bottom: 100px;
   color: #64ffda;
   width: auto;
-  margin: 0 0 0 20px;
-  padding: 0 0 0 20px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.586);
 }
 .projets {
